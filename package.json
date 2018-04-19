@@ -1,0 +1,25 @@
+{
+  "name": "codemoth-website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Sebastian Everett Eriksson",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "concurrently": "^3.5.1",
+    "nodemon": "^1.17.3",
+    "tape": "^4.9.0",
+    "typescript": "^2.8.1"
+  },
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "jshintConfig": {
+    "asi": 1,
+    "esversion": 6
+  },
+  "scripts": {
+    "front": "webpack",
+    "back": "concurrently \"nodemon ./index\" \"tsc -w\"",
+    "test": "tape tests/**/*.js"
+  }
+}
